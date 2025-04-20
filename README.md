@@ -1,11 +1,11 @@
 **Описание:**
-Файл со скриптом - DevOps_test_task.sh
-Логи полной работы скрипта для двух серверов - PG_install_on_AlmaLinux.log и PG_install_on_Debian.log
+- Файл со скриптом - DevOps_test_task.sh
+- Логи полной работы скрипта для двух серверов - PG_install_on_AlmaLinux.log и PG_install_on_Debian.log
 
 **Сервера:**
 Целевые сервера:
-Debian 12.10	IP: 192.168.21.70
-AlmaLinux 9.5	IP: 192.168.21.62
+- Debian 12.10	IP: 192.168.21.70
+- AlmaLinux 9.5	IP: 192.168.21.62
 
 Bash скрипт выполнялся на 3-ем сервере Debian 12.10
 
@@ -14,16 +14,15 @@ Bash скрипт выполнялся на 3-ем сервере Debian 12.10
 .ssh-keygen -t rsa
 
 Публичны ключи скопированы на целевые сервера
-cat ~/.ssh/id_rsa.pub | ssh root@192.168.21.62 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
-cat ~/.ssh/id_rsa.pub | ssh root@192.168.21.70 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+- cat ~/.ssh/id_rsa.pub | ssh root@192.168.21.62 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+- cat ~/.ssh/id_rsa.pub | ssh root@192.168.21.70 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 
 Ключ находится здесь:
 "$HOME/.ssh/id_rsa"
 
 На серверах установлена локаль и разделитель - точка
-
-localectl set-locale LANG=en_US.UTF-8
-localectl set-keymap us
+- localectl set-locale LANG=en_US.UTF-8
+- localectl set-keymap us
 
 **Особенности реализации:**
 Для имитации нагрузки на сервер запускается команда
