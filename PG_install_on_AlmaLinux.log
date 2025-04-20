@@ -1,0 +1,211 @@
+Какую версию PostgreSQL будем устанавливать? Введите мажорный номер: 
+Оцениваем загрузку серверов...
+srv-debian: загрузка 0.63
+srv-almalinux: загрузка 0.06
+
+
+WARNING: aptWARNING:  aptdoes not have a stable CLI interface.  Use with caution in scripts.does not have a stable CLI interface. 
+Use with caution in scripts.
+
+
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+Пол:1 http://security.debian.org/debian-security bookworm-security InRelease [48,0 kB]
+Сущ:2 http://deb.debian.org/debian bookworm InRelease
+Уже установлен пакет bc самой новой версии (1.07.1-3+b1).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.
+Сущ:3 http://deb.debian.org/debian bookworm-updates InRelease
+Целевой сервер: srv-almalinux
+Сущ:4 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg InRelease
+Чтение списков пакетов…
+E: Файл Release для http://security.debian.org/debian-security/dists/bookworm-security/InRelease пока не действителен (недостоверный ещё 16мин 40с). Обновление этого репозитория производиться не будет.
+Устанавливаем PostgreSQL
+Обновляем систему и устанавливаем зависимости...
+AlmaLinux 9 - AppStream                         5.2 kB/s | 4.2 kB     00:00    
+AlmaLinux 9 - BaseOS                            6.7 kB/s | 3.8 kB     00:00    
+AlmaLinux 9 - Extras                            6.1 kB/s | 3.3 kB     00:00    
+Dependencies resolved.
+Nothing to do.
+Complete!
+Package curl-7.76.1-31.el9.x86_64 is already installed.
+Dependencies resolved.
+================================================================================
+ Package            Architecture    Version               Repository       Size
+================================================================================
+Installing:
+ yum-utils          noarch          4.3.0-16.el9          baseos           35 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 35 k
+Installed size: 23 k
+Downloading Packages:
+yum-utils-4.3.0-16.el9.noarch.rpm               406 kB/s |  35 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                            60 kB/s |  35 kB     00:00     
+AlmaLinux 9 - BaseOS                            134 kB/s | 3.1 kB     00:00    
+Importing GPG key 0xB86B3716:
+ Userid     : "AlmaLinux OS 9 <packager@almalinux.org>"
+ Fingerprint: BF18 AC28 7617 8908 D6E7 1267 D36C B86C B86B 3716
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : yum-utils-4.3.0-16.el9.noarch                          1/1 
+  Running scriptlet: yum-utils-4.3.0-16.el9.noarch                          1/1 
+  Verifying        : yum-utils-4.3.0-16.el9.noarch                          1/1 
+
+Installed:
+  yum-utils-4.3.0-16.el9.noarch                                                 
+
+Complete!
+bash: lsb_release: command not found
+Добавляем репозиторий PostgreSQL 15...
+Last metadata expiration check: 0:00:05 ago on Sun 20 Apr 2025 10:56:40 PM MSK.
+pgdg-redhat-repo-latest.noarch.rpm               33 kB/s |  12 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package                Architecture Version           Repository          Size
+================================================================================
+Installing:
+ pgdg-redhat-repo       noarch       42.0-50PGDG       @commandline        12 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total size: 12 k
+Installed size: 15 k
+Downloading Packages:
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : pgdg-redhat-repo-42.0-50PGDG.noarch                    1/1 
+  Verifying        : pgdg-redhat-repo-42.0-50PGDG.noarch                    1/1 
+
+Installed:
+  pgdg-redhat-repo-42.0-50PGDG.noarch                                           
+
+Complete!
+Устанавливаем PostgreSQL 15...
+PostgreSQL common RPMs for RHEL / Rocky / AlmaL 1.4 kB/s | 659  B     00:00    
+PostgreSQL common RPMs for RHEL / Rocky / AlmaL 2.4 MB/s | 2.4 kB     00:00    
+Importing GPG key 0x08B40D20:
+ Userid     : "PostgreSQL RPM Repository <pgsql-pkg-yum@lists.postgresql.org>"
+ Fingerprint: D4BF 08AE 67A0 B4C7 A1DB CCD2 40BC A2B4 08B4 0D20
+ From       : /etc/pki/rpm-gpg/PGDG-RPM-GPG-KEY-RHEL
+PostgreSQL common RPMs for RHEL / Rocky / AlmaL 521 kB/s | 476 kB     00:00    
+PostgreSQL 17 for RHEL / Rocky / AlmaLinux 9 -  1.5 kB/s | 659  B     00:00    
+PostgreSQL 17 for RHEL / Rocky / AlmaLinux 9 -  2.4 MB/s | 2.4 kB     00:00    
+Importing GPG key 0x08B40D20:
+ Userid     : "PostgreSQL RPM Repository <pgsql-pkg-yum@lists.postgresql.org>"
+ Fingerprint: D4BF 08AE 67A0 B4C7 A1DB CCD2 40BC A2B4 08B4 0D20
+ From       : /etc/pki/rpm-gpg/PGDG-RPM-GPG-KEY-RHEL
+PostgreSQL 17 for RHEL / Rocky / AlmaLinux 9 -  319 kB/s | 391 kB     00:01    
+PostgreSQL 16 for RHEL / Rocky / AlmaLinux 9 -  1.4 kB/s | 659  B     00:00    
+PostgreSQL 16 for RHEL / Rocky / AlmaLinux 9 -  2.4 MB/s | 2.4 kB     00:00    
+Importing GPG key 0x08B40D20:
+ Userid     : "PostgreSQL RPM Repository <pgsql-pkg-yum@lists.postgresql.org>"
+ Fingerprint: D4BF 08AE 67A0 B4C7 A1DB CCD2 40BC A2B4 08B4 0D20
+ From       : /etc/pki/rpm-gpg/PGDG-RPM-GPG-KEY-RHEL
+PostgreSQL 16 for RHEL / Rocky / AlmaLinux 9 -  572 kB/s | 610 kB     00:01    
+PostgreSQL 15 for RHEL / Rocky / AlmaLinux 9 -  1.4 kB/s | 659  B     00:00    
+PostgreSQL 15 for RHEL / Rocky / AlmaLinux 9 -  2.4 MB/s | 2.4 kB     00:00    
+Importing GPG key 0x08B40D20:
+ Userid     : "PostgreSQL RPM Repository <pgsql-pkg-yum@lists.postgresql.org>"
+ Fingerprint: D4BF 08AE 67A0 B4C7 A1DB CCD2 40BC A2B4 08B4 0D20
+ From       : /etc/pki/rpm-gpg/PGDG-RPM-GPG-KEY-RHEL
+PostgreSQL 15 for RHEL / Rocky / AlmaLinux 9 -  826 kB/s | 845 kB     00:01    
+PostgreSQL 14 for RHEL / Rocky / AlmaLinux 9 -  1.4 kB/s | 659  B     00:00    
+PostgreSQL 14 for RHEL / Rocky / AlmaLinux 9 -  2.4 MB/s | 2.4 kB     00:00    
+Importing GPG key 0x08B40D20:
+ Userid     : "PostgreSQL RPM Repository <pgsql-pkg-yum@lists.postgresql.org>"
+ Fingerprint: D4BF 08AE 67A0 B4C7 A1DB CCD2 40BC A2B4 08B4 0D20
+ From       : /etc/pki/rpm-gpg/PGDG-RPM-GPG-KEY-RHEL
+PostgreSQL 14 for RHEL / Rocky / AlmaLinux 9 -  997 kB/s | 1.1 MB     00:01    
+PostgreSQL 13 for RHEL / Rocky / AlmaLinux 9 -  1.5 kB/s | 659  B     00:00    
+PostgreSQL 13 for RHEL / Rocky / AlmaLinux 9 -  2.4 MB/s | 2.4 kB     00:00    
+Importing GPG key 0x08B40D20:
+ Userid     : "PostgreSQL RPM Repository <pgsql-pkg-yum@lists.postgresql.org>"
+ Fingerprint: D4BF 08AE 67A0 B4C7 A1DB CCD2 40BC A2B4 08B4 0D20
+ From       : /etc/pki/rpm-gpg/PGDG-RPM-GPG-KEY-RHEL
+PostgreSQL 13 for RHEL / Rocky / AlmaLinux 9 -  995 kB/s | 1.0 MB     00:01    
+Dependencies resolved.
+================================================================================
+ Package                  Arch        Version                 Repository   Size
+================================================================================
+Installing:
+ postgresql15             x86_64      15.12-1PGDG.rhel9       pgdg15      1.5 M
+ postgresql15-server      x86_64      15.12-1PGDG.rhel9       pgdg15      6.1 M
+Installing dependencies:
+ postgresql15-libs        x86_64      15.12-1PGDG.rhel9       pgdg15      303 k
+
+Transaction Summary
+================================================================================
+Install  3 Packages
+
+Total download size: 7.9 M
+Installed size: 35 M
+Downloading Packages:
+(1/3): postgresql15-libs-15.12-1PGDG.rhel9.x86_ 650 kB/s | 303 kB     00:00    
+(2/3): postgresql15-15.12-1PGDG.rhel9.x86_64.rp 1.9 MB/s | 1.5 MB     00:00    
+(3/3): postgresql15-server-15.12-1PGDG.rhel9.x8 3.7 MB/s | 6.1 MB     00:01    
+--------------------------------------------------------------------------------
+Total                                           4.7 MB/s | 7.9 MB     00:01     
+PostgreSQL 15 for RHEL / Rocky / AlmaLinux 9 -  2.4 MB/s | 2.4 kB     00:00    
+Importing GPG key 0x08B40D20:
+ Userid     : "PostgreSQL RPM Repository <pgsql-pkg-yum@lists.postgresql.org>"
+ Fingerprint: D4BF 08AE 67A0 B4C7 A1DB CCD2 40BC A2B4 08B4 0D20
+ From       : /etc/pki/rpm-gpg/PGDG-RPM-GPG-KEY-RHEL
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : postgresql15-libs-15.12-1PGDG.rhel9.x86_64             1/3 
+  Running scriptlet: postgresql15-libs-15.12-1PGDG.rhel9.x86_64             1/3 
+  Installing       : postgresql15-15.12-1PGDG.rhel9.x86_64                  2/3 
+  Running scriptlet: postgresql15-15.12-1PGDG.rhel9.x86_64                  2/3 
+  Running scriptlet: postgresql15-server-15.12-1PGDG.rhel9.x86_64           3/3 
+  Installing       : postgresql15-server-15.12-1PGDG.rhel9.x86_64           3/3 
+  Running scriptlet: postgresql15-server-15.12-1PGDG.rhel9.x86_64           3/3 
+  Verifying        : postgresql15-15.12-1PGDG.rhel9.x86_64                  1/3 
+  Verifying        : postgresql15-libs-15.12-1PGDG.rhel9.x86_64             2/3 
+  Verifying        : postgresql15-server-15.12-1PGDG.rhel9.x86_64           3/3 
+
+Installed:
+  postgresql15-15.12-1PGDG.rhel9.x86_64                                         
+  postgresql15-libs-15.12-1PGDG.rhel9.x86_64                                    
+  postgresql15-server-15.12-1PGDG.rhel9.x86_64                                  
+
+Complete!
+Инициализируем базу данных...
+Initializing database ... OK
+
+Включаем и запускаем службу PostgreSQL...
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql-15.service → /usr/lib/systemd/system/postgresql-15.service.
+PostgreSQL установлен
+Настраиваем PostgreSQL
+could not change directory to "/root": Permission denied
+could not change directory to "/root": Permission denied
+Настройка завершена
+Проверяем соединение и выполнение запроса SELECT 1
+could not change directory to "/root": Permission denied
+ ?column? 
+----------
+        1
+(1 row)
+
+Проверка работы БД завершена успешно

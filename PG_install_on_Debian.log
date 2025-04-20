@@ -1,0 +1,274 @@
+Какую версию PostgreSQL будем устанавливать? Введите мажорный номер: 
+Оцениваем загрузку серверов...
+srv-debian: загрузка 0.03
+srv-almalinux: загрузка 1.56
+
+
+WARNING: WARNING: aptapt  does not have a stable CLI interface. does not have a stable CLI interface. Use with caution in scripts.Use with caution in scripts.
+
+
+
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+Следующие НОВЫЕ пакеты будут установлены:
+  bc
+Сущ:1 http://deb.debian.org/debian bookworm InRelease
+Пол:2 http://security.debian.org/debian-security bookworm-security InRelease [48,0 kB]
+Пол:3 http://deb.debian.org/debian bookworm-updates InRelease [55,4 kB]
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.
+Необходимо скачать 110 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 247 kB.
+Пол:1 http://deb.debian.org/debian bookworm/main amd64 bc amd64 1.07.1-3+b1 [110 kB]
+Получено 110 kB за 0с (388 kB/s)
+Выбор ранее не выбранного пакета bc.
+(Чтение базы данных … (Чтение базы данных … 5%(Чтение базы данных … 10%(Чтение базы данных … 15%(Чтение базы данных … 20%(Чтение базы данных … 25%(Чтение базы данных … 30%(Чтение базы данных … 35%(Чтение базы данных … 40%(Чтение базы данных … 45%(Чтение базы данных … 50%(Чтение базы данных … 55%(Чтение базы данных … 60%(Чтение базы данных … 65%(Чтение базы данных … 70%(Чтение базы данных … 75%(Чтение базы данных … 80%(Чтение базы данных … 85%(Чтение базы данных … 90%(Чтение базы данных … 95%(Чтение базы данных … 100%(Чтение базы данных … на данный момент установлено 33220 файлов и каталогов.)
+Подготовка к распаковке …/bc_1.07.1-3+b1_amd64.deb …
+Распаковывается bc (1.07.1-3+b1) …
+Настраивается пакет bc (1.07.1-3+b1) …
+Целевой сервер: srv-debian
+Пол:4 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg InRelease [129 kB]
+Пол:5 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 Packages [360 kB]
+Чтение списков пакетов…Устанавливаем PostgreSQL
+Обновляем систему и устанавливаем нужные пакеты...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Get:2 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:4 http://security.debian.org/debian-security bookworm-security/main Sources [153 kB]
+
+E: Файл Release для http://security.debian.org/debian-security/dists/bookworm-security/InRelease пока не действителен (недостоверный ещё 20мин 17с). Обновление этого репозитория производиться не будет.
+Get:5 http://security.debian.org/debian-security bookworm-security/main amd64 Packages [260 kB]
+Get:6 http://security.debian.org/debian-security bookworm-security/main Translation-en [156 kB]
+Fetched 672 kB in 1s (452 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+wget is already the newest version (1.21.3-1+deb12u1).
+lsb-release is already the newest version (12.0-1).
+lsb-release set to manually installed.
+ca-certificates is already the newest version (20230311).
+The following packages were automatically installed and are no longer required:
+  cups-client cups-ipp-utils cups-ppdc cups-server-common libcupsfilters1
+  libfontembed1 liblouisutdml-bin liblouisutdml-data liblouisutdml9
+  libpoppler-cpp0v5 libqpdf29 ssl-cert
+Use 'apt autoremove' to remove them.
+The following NEW packages will be installed:
+  gnupg2
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 445 kB of archives.
+After this operation, 464 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 gnupg2 all 2.2.40-1.1 [445 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 445 kB in 0s (1,199 kB/s)
+Selecting previously unselected package gnupg2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 173717 files and directories currently installed.)
+Preparing to unpack .../gnupg2_2.2.40-1.1_all.deb ...
+Unpacking gnupg2 (2.2.40-1.1) ...
+Setting up gnupg2 (2.2.40-1.1) ...
+Processing triggers for man-db (2.11.2-2) ...
+bash: line 1: rpm: command not found
+Добавляем репозиторий PostgreSQL 17 в /etc/apt/sources.list.d/pgdg.list...
+Импортируем GPG-ключ PostgreSQL 17...
+Обновляем пакеты...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://security.debian.org/debian-security bookworm-security InRelease
+Get:3 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg InRelease [129 kB]
+Hit:4 http://deb.debian.org/debian bookworm-updates InRelease
+Get:5 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 Packages [360 kB]
+Fetched 489 kB in 3s (180 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+Устанавливаем PostgreSQL 17...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  cups-client cups-ipp-utils cups-ppdc cups-server-common libcupsfilters1
+  libfontembed1 liblouisutdml-bin liblouisutdml-data liblouisutdml9
+  libpoppler-cpp0v5 libqpdf29
+Use 'apt autoremove' to remove them.
+The following additional packages will be installed:
+  libcommon-sense-perl libio-pty-perl libipc-run-perl libjson-perl
+  libjson-xs-perl libllvm19 libpq5 libtypes-serialiser-perl
+  postgresql-client-common postgresql-common postgresql-common-dev sysstat
+Suggested packages:
+  postgresql-doc-17 isag
+The following NEW packages will be installed:
+  libcommon-sense-perl libio-pty-perl libipc-run-perl libjson-perl
+  libjson-xs-perl libllvm19 libpq5 libtypes-serialiser-perl postgresql-17
+  postgresql-client-17 postgresql-client-common postgresql-common
+  postgresql-common-dev sysstat
+0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
+Need to get 45.9 MB of archives.
+After this operation, 203 MB of additional disk space will be used.
+Get:1 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 postgresql-client-common all 277.pgdg120+1 [48.0 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 libjson-perl all 4.10000-1 [87.5 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 libio-pty-perl amd64 1:1.17-1 [34.9 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 libipc-run-perl all 20220807.0-1 [104 kB]
+Get:5 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 postgresql-common-dev all 277.pgdg120+1 [74.1 kB]
+Get:6 http://deb.debian.org/debian bookworm/main amd64 libcommon-sense-perl amd64 3.75-3 [23.0 kB]
+Get:7 http://deb.debian.org/debian bookworm/main amd64 libtypes-serialiser-perl all 1.01-1 [12.2 kB]
+Get:8 http://deb.debian.org/debian bookworm/main amd64 libjson-xs-perl amd64 4.030-2+b1 [92.1 kB]
+Get:9 http://deb.debian.org/debian bookworm/main amd64 libllvm19 amd64 1:19.1.4-1~deb12u1 [25.9 MB]
+Get:10 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 postgresql-common all 277.pgdg120+1 [126 kB]
+Get:11 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 libpq5 amd64 17.4-1.pgdg120+2 [226 kB]
+Get:12 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 postgresql-client-17 amd64 17.4-1.pgdg120+2 [2,032 kB]
+Get:13 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 postgresql-17 amd64 17.4-1.pgdg120+2 [16.5 MB]
+Get:14 http://deb.debian.org/debian bookworm/main amd64 sysstat amd64 12.6.1-1 [596 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 45.9 MB in 19s (2,448 kB/s)
+Selecting previously unselected package libjson-perl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 173724 files and directories currently installed.)
+Preparing to unpack .../00-libjson-perl_4.10000-1_all.deb ...
+Unpacking libjson-perl (4.10000-1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../01-postgresql-client-common_277.pgdg120+1_all.deb ...
+Unpacking postgresql-client-common (277.pgdg120+1) ...
+Selecting previously unselected package libio-pty-perl.
+Preparing to unpack .../02-libio-pty-perl_1%3a1.17-1_amd64.deb ...
+Unpacking libio-pty-perl (1:1.17-1) ...
+Selecting previously unselected package libipc-run-perl.
+Preparing to unpack .../03-libipc-run-perl_20220807.0-1_all.deb ...
+Unpacking libipc-run-perl (20220807.0-1) ...
+Selecting previously unselected package postgresql-common-dev.
+Preparing to unpack .../04-postgresql-common-dev_277.pgdg120+1_all.deb ...
+Unpacking postgresql-common-dev (277.pgdg120+1) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../05-postgresql-common_277.pgdg120+1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (277.pgdg120+1) ...
+Selecting previously unselected package libcommon-sense-perl:amd64.
+Preparing to unpack .../06-libcommon-sense-perl_3.75-3_amd64.deb ...
+Unpacking libcommon-sense-perl:amd64 (3.75-3) ...
+Selecting previously unselected package libtypes-serialiser-perl.
+Preparing to unpack .../07-libtypes-serialiser-perl_1.01-1_all.deb ...
+Unpacking libtypes-serialiser-perl (1.01-1) ...
+Selecting previously unselected package libjson-xs-perl.
+Preparing to unpack .../08-libjson-xs-perl_4.030-2+b1_amd64.deb ...
+Unpacking libjson-xs-perl (4.030-2+b1) ...
+Selecting previously unselected package libllvm19:amd64.
+Preparing to unpack .../09-libllvm19_1%3a19.1.4-1~deb12u1_amd64.deb ...
+Unpacking libllvm19:amd64 (1:19.1.4-1~deb12u1) ...
+Selecting previously unselected package libpq5:amd64.
+Preparing to unpack .../10-libpq5_17.4-1.pgdg120+2_amd64.deb ...
+Unpacking libpq5:amd64 (17.4-1.pgdg120+2) ...
+Selecting previously unselected package postgresql-client-17.
+Preparing to unpack .../11-postgresql-client-17_17.4-1.pgdg120+2_amd64.deb ...
+Unpacking postgresql-client-17 (17.4-1.pgdg120+2) ...
+Selecting previously unselected package postgresql-17.
+Preparing to unpack .../12-postgresql-17_17.4-1.pgdg120+2_amd64.deb ...
+Unpacking postgresql-17 (17.4-1.pgdg120+2) ...
+Selecting previously unselected package sysstat.
+Preparing to unpack .../13-sysstat_12.6.1-1_amd64.deb ...
+Unpacking sysstat (12.6.1-1) ...
+Setting up postgresql-client-common (277.pgdg120+1) ...
+Setting up libllvm19:amd64 (1:19.1.4-1~deb12u1) ...
+Setting up libio-pty-perl (1:1.17-1) ...
+Setting up libpq5:amd64 (17.4-1.pgdg120+2) ...
+Setting up libcommon-sense-perl:amd64 (3.75-3) ...
+Setting up libipc-run-perl (20220807.0-1) ...
+Setting up libtypes-serialiser-perl (1.01-1) ...
+Setting up libjson-perl (4.10000-1) ...
+Setting up sysstat (12.6.1-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/default/sysstat with new version
+update-alternatives: using /usr/bin/sar.sysstat to provide /usr/bin/sar (sar) in auto mode
+Created symlink /etc/systemd/system/sysstat.service.wants/sysstat-collect.timer → /lib/systemd/system/sysstat-collect.timer.
+Created symlink /etc/systemd/system/sysstat.service.wants/sysstat-summary.timer → /lib/systemd/system/sysstat-summary.timer.
+Created symlink /etc/systemd/system/multi-user.target.wants/sysstat.service → /lib/systemd/system/sysstat.service.
+Setting up postgresql-common-dev (277.pgdg120+1) ...
+Setting up libjson-xs-perl (4.030-2+b1) ...
+Setting up postgresql-client-17 (17.4-1.pgdg120+2) ...
+update-alternatives: using /usr/share/postgresql/17/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up postgresql-common (277.pgdg120+1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+  en_us
+Removing obsolete dictionary files:
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /lib/systemd/system/postgresql.service.
+Setting up postgresql-17 (17.4-1.pgdg120+2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Creating new PostgreSQL cluster 17/main ...
+/usr/lib/postgresql/17/bin/initdb -D /var/lib/postgresql/17/main --auth-local peer --auth-host scram-sha-256 --no-instructions
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/17/main ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Europe/Istanbul
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u10) ...
+Включаем и запускаем службу PostgreSQL 17...
+Synchronizing state of postgresql.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable postgresql
+PostgreSQL установлен
+Настраиваем PostgreSQL
+Настройка завершена
+Проверяем соединение и выполнение запроса SELECT 1
+ ?column? 
+----------
+        1
+(1 row)
+
+Проверка работы БД завершена успешно
