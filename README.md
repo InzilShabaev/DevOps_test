@@ -3,6 +3,7 @@
 - Логи полной работы скрипта для двух серверов - PG_install_on_AlmaLinux.log и PG_install_on_Debian.log
 
 **Сервера:**
+
 Целевые сервера:
 - Debian 12.10	IP: 192.168.21.70
 - AlmaLinux 9.5	IP: 192.168.21.62
